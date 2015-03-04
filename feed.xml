@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Dissident Trainings</title>
+		<description>Extreme Programming Blog</description>		
+		<link>http://dissident-trainings.de</link>
+		<atom:link href="http://dissident-trainings.de/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Delivering a node.js training</title>
+				<description>&lt;p&gt;On a short notice a big training company had approached me - A trainer of them had dropped out of a planned training and they needed someone to deliver a introduction to the node platform in the context of web development for one of the bigger agencies here in hamburg.&lt;/p&gt;
+
+&lt;p&gt;As always: The participants already had a good idea about Javascript and knew basics of the node platform. It was all more about filling the gaps than teaching all “from the ground up”.&lt;/p&gt;
+
+&lt;h2 id=&quot;the_content&quot;&gt;The content&lt;/h2&gt;
+
+&lt;p&gt;We had a Training in &lt;a href=&quot;https://github.com/DissidentTrainings/node-js-training/blob/master/Agenda.md&quot;&gt;2 Parts aka days&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Day 1: Introduces to node.js, npm and packages
+&lt;ul&gt;
+&lt;li&gt;How node works and some look into npm&lt;/li&gt;
+
+&lt;li&gt;Debugging and monitoring Node apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Day 2: Express JS, TDD, Grunt
+&lt;ul&gt;
+&lt;li&gt;Creating a CommonJS module&lt;/li&gt;
+
+&lt;li&gt;Creating a ExpressJS app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the_results&quot;&gt;The results&lt;/h2&gt;
+
+&lt;p&gt;It was pretty nice to see the training unfold. The beginning was a bit rough, since I had to go into areas that I had rarely touched before and these were a bit bumpy at least.&lt;/p&gt;
+
+&lt;p&gt;I had created a simple repo for the first day, that reflects the progress of the workshop and introduces basic techniques like “git tag”, semver and such tools. All this is required later on and helps.&lt;/p&gt;
+
+&lt;p&gt;Surprisingly the participants wanted to code more (and even more) so that I changed the second day to just Pairprogramming/Coding-Dojo/Mob programming (I do not differ that so much).&lt;/p&gt;
+
+&lt;p&gt;We started with 2 repos on github (which saw one or the other commit these days):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/DissidentTrainings/&quot;&gt;The “Workshop” Repo&lt;/a&gt; - Containing the Agenda&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://github.com/DissidentTrainings/node-js-training-examples&quot;&gt;The Examples Repo&lt;/a&gt; - Containing some simple steps to follow&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since most of the training was a practical introduction to something technical there was little documentation of contents (besides some ugly flipcharts - I need to patent the style). So how to solve the problem on getting a piece of documentation to the developers attending tsshe workshop? Easy thing: Just commit on a regular basis: We did Pairprogramming with a 5 minute change timer and on each of these changes of driver and navigator saw a commit to git.&lt;/p&gt;
+
+&lt;p&gt;This resulted in the einself App and commonJS module:&lt;/p&gt;
+
+&lt;p&gt;We created a webservice that uppercases any word and appends &lt;a href=&quot;http://heise.forenwiki.de/index.php?title=Einself&quot;&gt;!!!!1einself&lt;/a&gt; to it. I did choose the inside out way of building things (I can hear the ATDD community protesting with pitchforks already): Using Mocha Unit Tests for the CommonJS module and then re-using it in our express.js app the we just built and left untested (another pitchfork protest in front of my house).&lt;/p&gt;
+
+&lt;p&gt;We created 2 repos there:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https://github.com/DissidentTrainings/einselfuppercase&quot;&gt;CommonJS Module&lt;/a&gt; - A little SJ, mocha tests and&lt;/li&gt;
+
+&lt;li&gt;The &lt;a href=&quot;https://github.com/DissidentTrainings/einselfuppercase-app&quot;&gt;express.js App&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This forced us to really create something productive and since we committed on every driver/navigator change, there is a good documentation about what we did and when in the commit logs of the &lt;a href=&quot;https://github.com/DissidentTrainings/einselfuppercase/commits/master&quot;&gt;module&lt;/a&gt; and the &lt;a href=&quot;https://github.com/DissidentTrainings/einselfuppercase-app/commits/master&quot;&gt;app&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what_i_learned&quot;&gt;What I learned&lt;/h2&gt;
+
+&lt;p&gt;There is a lot of lessons learned for me here for me&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Even after some years of node.js - I have still areas that I do not know very well. The new &lt;a href=&quot;http://nodejs.org/api/cluster.html&quot;&gt;cluster&lt;/a&gt; module and the libraries behind node are 2 of them.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.amazon.de/Training-Back-Room-Aside-Learn/dp/0787996629&quot;&gt;Training from back of the room&lt;/a&gt; can be done with straight forward technical trainings.&lt;/li&gt;
+
+&lt;li&gt;Pairing works quite well - Especially when participants with less knowhow learn that they get away from the keyboard all 5 minutes.&lt;/li&gt;
+
+&lt;li&gt;Every pair change one commit not only works at work, but creates a good piece of documentation.&lt;/li&gt;
+
+&lt;li&gt;Grunt and Gulp.js are topics that need to be revisited. Too big to really explain them in a workshop.&lt;/li&gt;
+
+&lt;li&gt;Participants value working it out on the keyboard over getting everything presented on a silver plate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;interested&quot;&gt;Interested?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If you are interested in getting me to your place and bringing your team up to speed in all things node.js and express.js basics: contact me. Still places for 2014 available.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you want to do it for your self: I will be adding the licenses to the repositories soonish so that the material is us able in a commercial context.&lt;/p&gt;</description>
+				<pubDate>Mon, 24 Nov 2014 08:42:13 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/11/24/Training-node-js.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/11/24/Training-node-js.html</guid>
+			</item>
+		
+			<item>
+				<title>Reasons to build a pairing station</title>
+				<description>&lt;p&gt;Having a dedicated computer and desk for the effort of Pair programming is a great thing. It is a little counter intuitive to those who seek for efficient use of the workplace and try to use every inch of the office all the time. Creative people (programmers) are no laying hens and should not be treated this way. So why is it good to have a computer around that is just dedicated for Pair programming?&lt;/p&gt;
+
+&lt;h2 id=&quot;one_button_build&quot;&gt;One Button Build&lt;/h2&gt;
+
+&lt;p&gt;You will have to set up the development environment easily and multiple times in order to develop. If that takes some hours or a day, you will be having not much productive output. So using a pairing station will force you to get something that is called “One button build”: A build that works as fast as checkout, setup some environment variables and start developing. Using docker, puppet and some other niceties make this is easily possible. A lot of other processes and tools like for example the CI benefit from this “One button build” as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;one_button_setup&quot;&gt;One button setup&lt;/h2&gt;
+
+&lt;p&gt;Same goes for your own development environment aka IDE and other tools that you require. Soon you will end up with a bunch of scripts in version control to (re-)build your IDE and configure it with the push of a button. One side effect: These re-configurations are so fast, you even can use them when you change driver and navigator.&lt;/p&gt;
+
+&lt;h2 id=&quot;undisturbed_working&quot;&gt;Undisturbed working&lt;/h2&gt;
+
+&lt;p&gt;Soon everyone will know that a pair working on this particular desktop is not to be disturbed. Social pressure and a special place work together. “It must be important, there are 2 persons” comes together with that special desk where a team of two is to be observed very often.&lt;/p&gt;
+
+&lt;h2 id=&quot;clean_desk&quot;&gt;Clean desk&lt;/h2&gt;
+
+&lt;p&gt;I personally like my mess on the table: Yesterdays coffee cup, a magazine and other things clutter up my desk and do not ask for “guests” literally. So before I start to pair the cleaning has to commence. This is not the case with the pairing station. It is just used for one purpose and multiple people work there. This makes it easy to keep it a clean place.&lt;/p&gt;
+
+&lt;h2 id=&quot;a_big_machine&quot;&gt;A big machine&lt;/h2&gt;
+
+&lt;p&gt;Most of us use laptops these days. Machines got better and you might not feel any limitation there. But in fact, laptops are pretty limited in terms of the amount of ram that you can install and the amount of displays you can use. The paring station is limited to one place and this way you can decide for a desktop machine. With a budget comparable to a developer notebook you can get a high performance machine that is just capable of a “little” more. Want to have 64 or even 128 gig of ram? Just buy it. SSD drives setup as raid to get you as much write and read speed as the controller allows? Easy. Most of these things will be pretty close to what a modern fully setup macbook pro retina costs.&lt;/p&gt;
+
+&lt;h2 id=&quot;the_whiteboard&quot;&gt;The whiteboard&lt;/h2&gt;
+
+&lt;p&gt;A lot of problems can be solved on a whiteboard even better and before starting to bruteforce a problem on the keyboard you might want to have a little session on the whiteboard. A good pairing station has a whiteboard close and accessible with all the tools required to use it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;As soon as you got the basics of Pair programming sorted out, you should build a pairing station to make sure everyone has a perfect place to go to for a pairing session. One one hand it enforces some good behaviours (e.g. One button builds) and on the other it makes it easier to have a dedicated place to sit down and tinker over a coding problem.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+				<pubDate>Wed, 19 Nov 2014 08:42:13 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/11/19/Reasons-to-build-a-pairing-station.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/11/19/Reasons-to-build-a-pairing-station.html</guid>
+			</item>
+		
+			<item>
+				<title>Code reviews and Pair programming</title>
+				<description>&lt;blockquote&gt;
+&lt;p&gt;Do do we still need Codereviews when we do Pairprogramming?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is a regular question posed at trainings and when the topic Pair programming in general is coming up in discussions.&lt;/p&gt;
+
+&lt;p&gt;I actively advertise Pairing as a way of reducing the amount of time spent in Codereviews. However, there seems a notion to write blogposts that put these two things into a relation with a clear “vs.” apporach. A lot of them are named &lt;strong&gt;Codereviews vs. Pair programming&lt;/strong&gt;. I have collected some of those that I found to be remarkable:&lt;/p&gt;
+
+&lt;p&gt;Coding Horror - Jeff Attwood - &lt;a href=&quot;http://blog.codinghorror.com/pair-programming-vs-code-reviews/&quot;&gt;seems to be in favor of pairing&lt;/a&gt;, sees the value in both but prefers Pairing for the social factors. It is easier to critique and tak critique.&lt;/p&gt;
+
+&lt;p&gt;Theodore Nguyen seems to see the value of &lt;a href=&quot;http://www.theodorenguyen-cao.com/2008/10/29/pair-programming-greater-than-code-reviews/&quot;&gt;Pair programming greater than Code Reviews&lt;/a&gt;. I can understand that. But I would really add that it depends on the type of Codereview and applied technique.&lt;/p&gt;
+
+&lt;p&gt;Here is another by Paul Hinze giving a lot of detail on how to use both &lt;a href=&quot;http://phinze.github.io/2013/12/08/pairing-vs-code-review.html&quot;&gt;“correctly” and calls for pragmatic choices&lt;/a&gt;. I would dare you to read it when ou do one and want to move from one to the other. Maybe you can stay with Pairing and just improve the way you are doing it&lt;/p&gt;
+
+&lt;p&gt;Here is another one, making the point that Codereview is not Pairing (and vice versa). &lt;a href=&quot;http://www.jstorimer.com/blogs/workingwithcode/7766111-pairing-is-not-code-review&quot;&gt;He seems to focus on the change of perspective&lt;/a&gt; that you have when you review code.&lt;/p&gt;
+
+&lt;p&gt;Cockburn says &lt;a href=&quot;http://dsc.ufcg.edu.br/~jacques/cursos/map/recursos/XPSardinia.pdf&quot;&gt;“Pair programming is contiuous Codereviews&lt;/a&gt; in his landmark paper on the topic. If you dont know it yet: Read it.&lt;/p&gt;
+
+&lt;p&gt;William Caputo makes the point that you can choose none, both or any. I object this, on the other hand the point he is making with &lt;a href=&quot;http://www.williamcaputo.com/posts/000067.html&quot;&gt;“Pairing is deep, Codereviews are wide”&lt;/a&gt; is pretty much on the spot.&lt;/p&gt;
+
+&lt;h2 id=&quot;so_what_is_my_take_on_this_pretty_easy&quot;&gt;So what is my take on this? Pretty Easy!&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;First:&lt;/strong&gt; The usage of &lt;strong&gt;vs.&lt;/strong&gt; is just a provocation that might lead an uninformed person into the notion that one replaces the other. This is not the case.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Second:&lt;/strong&gt; Pairing will change the way you do Codereviews and vice versa. My take is: Start with one of these things. learn how to use it and then start experimenting with the next one. These two things are closely related and one thing ís highly probable: Codereview results will be much more about the “hard things” and less about coding conventions or other smaler things and less important things that seem to fill so much of them. They might get you less results then in the Nuber of findings, but you have ore time to discuss the harder problems. And this is why you do code reviews in the first place.&lt;/p&gt;
+
+&lt;p&gt;A good chance to learn about this relation will be my Priprogramming Training in Munich on &lt;a href=&quot;https://www.xing.com/events/pairprogramming-workshop-1470922&quot;&gt;03.+04.12.2014&lt;/a&gt; in the Offices Mayflower. Come and see how this works together. Chance is: If you are using one og these techniques, the other can help you improve.&lt;/p&gt;
+
+&lt;p&gt;It is not Codereviews &lt;strong&gt;VS.&lt;/strong&gt; Pair programming but &lt;strong&gt;CODEREVIEWS AND PAIR PROGRAMMING&lt;/strong&gt;&lt;/p&gt;</description>
+				<pubDate>Fri, 14 Nov 2014 08:42:13 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/11/14/codereviews-and-pairprogramming.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/11/14/codereviews-and-pairprogramming.html</guid>
+			</item>
+		
+			<item>
+				<title>Commercial thinking and action</title>
+				<description>&lt;p&gt;This blogpost begins with a little story. I once (think years not months) worked as a coach for company and we sat in one of the meetings held in regular intervals with the Management to discuss impediments to the process and in general product development. Suddenly in a little more heated part of the discussion, one of the managers said:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;In this case, the developers have to apply some commercial thinking.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I am not surprised hearing this demand by management oriented positions. I was sitting in the same boat when I had a team-lead position in another company. Two factors were contributing to the success of this other team heavily (besides the super awesome group of people, a goal and an environment to thrive): A good connection to the CFO with some mutual respect and his constant demand to apply commercial thinking (german: kaufmännisches Denken).&lt;/p&gt;
+
+&lt;p&gt;Back to the meeting. I was not prepared to the reactions when I posed a question to everyone attending:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hmmm. &lt;strong&gt;Who in this room had some form of formal commercial education?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You would expect that some top management positions (except the CFO who was not a part of this meeting) in a company would have picked up this kind of education along the lines. Long story short: None of the managers attending had any formal and practical education and experience with accounting, amortization. This was not the first time I made this observation. Very often business and software development are different “departments” and areas of operation.&lt;/p&gt;
+
+&lt;h2 id=&quot;theory_and_practice&quot;&gt;Theory and practice&lt;/h2&gt;
+
+&lt;p&gt;These things are often not really included in the timetables of Universities as much as the demands for this kind of knowledge arise later. And then there is the practical application of this knowledge as well: A lot of this knowhow is heavily counter intuitive. You must apply it for a certain time to get a feeling for it. In my first line of work, somewhere back in the 90ies, I had the luck to start off with a not so ordinary line of work as a forwarding merchant. As hard as it was being the apprentice of a prussian merchant in its truest sense, his constant demand for high-quality and business wise reasonable the 3 years brought me to a point where I took something away that I could apply some years later when I started to develop software: &lt;strong&gt;commercial thinking and acting&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;For a long time I did not realize how much of an advantage this is, especially when it comes to leadership and servant leadership positions. The commercial world and thus software development has some rules that apply a little bit like physics. You can try to break them, but you will not be successful.&lt;/p&gt;
+
+&lt;h2 id=&quot;misinterpretations_fads_and_here_be_dragons&quot;&gt;Misinterpretations, fads and “here be dragons”&lt;/h2&gt;
+
+&lt;p&gt;I will start a new series in this blog about basic principles that are standing behind every business and put these into the context software development and the team effort to create products. I will be putting aside trendy things like “Service Design Thinking” or “Lean Startup” as well as the latest trends “Agile Development” as first point of view. I am not implying these are bad in this context but I will try to start off with the angle of commercial thinking to get to a point where we can revisit some of the actual ideas of agile and product development and put them into context. The following topics seem to be interesting.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Economic feasabillity&lt;/li&gt;
+
+&lt;li&gt;Effective &amp;amp; efficient&lt;/li&gt;
+
+&lt;li&gt;Cost value ratio&lt;/li&gt;
+
+&lt;li&gt;Economic feasibility&lt;/li&gt;
+
+&lt;li&gt;Investment vs. cost&lt;/li&gt;
+
+&lt;li&gt;The CFO and why he is a good ally for software teams&lt;/li&gt;
+
+&lt;li&gt;Types of cost&lt;/li&gt;
+
+&lt;li&gt;Long vs. short term thinking&lt;/li&gt;
+
+&lt;li&gt;Economies of scale&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, this is just a rough list. I would be interested in other input as well. The agile community seems to be pretty active here as well and most methods I came across had a commercial background to it. Interpreted and applied correctly these effects kick in relatively easy and once you know what to look out for it gets pretty simple to grasp what works and what not. I am certain (product-)development teams can draw some practical knowledge from this and find out the CFO is not as a grumpy man as it may seem very often.&lt;/p&gt;</description>
+				<pubDate>Tue, 11 Nov 2014 08:42:13 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/11/11/commercial-thinking.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/11/11/commercial-thinking.html</guid>
+			</item>
+		
+			<item>
+				<title>Book raffle - #whywepair</title>
+				<description>&lt;p&gt;I want to know a little bit more about the reasoning behind Pairprogramming usage in development teams.&lt;/p&gt;
+
+&lt;p&gt;To get you, dear readers, tweeting a lot about it I decided to give away an edition of “Pair Programming Illuminated” by Laurie Williams and Robert Kessler. It is the defacto standard book in this field of agile development.&lt;/p&gt;
+
+&lt;h2 id=&quot;whywepair&quot;&gt;#whywepair&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/51TXKD0A6VL._SX258_BO1,204,203,200_.jpg&quot; alt=&quot;Laurie Williams - Pairprogramming Illuminated&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to win the book you need to tweet a reason for the use of Pairprogramming in your projects and development teams containing the hashtag &lt;strong&gt;#whywepair&lt;/strong&gt; until Monday the 17.11.2014 (the start date of the &lt;a href=&quot;https://www.xing.com/events/pairprogramming-workshop-1465057/&quot;&gt;Hamburg Pairprogramming Workshop&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Its a #winwin: The participants get some motivational tweets on why developers use Pairprogramming and the tweeting folks get a chance to win the book which provides good advice, even for very seasoned pairing setups.&lt;/p&gt;
+
+&lt;p&gt;Let the games begin and let the world know #whywepair so that other can draw some motivation from it.&lt;/p&gt;</description>
+				<pubDate>Mon, 10 Nov 2014 08:42:13 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/11/10/why-we-pair-book-raffle.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/11/10/why-we-pair-book-raffle.html</guid>
+			</item>
+		
+			<item>
+				<title>Node.js training incoming</title>
+				<description>&lt;p&gt;Out of the blue I did something I wanted to do for a very long time - creating &lt;strong&gt;a 2 day training for node.js&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;On the one hand there is the fact I have fun with trainings and on the other hand people and companies keep asking me to give one. Then there is my constant work with the platform that goes way back when version numbers were low and JS on the server side was hip but not production ready.&lt;/p&gt;
+
+&lt;p&gt;I was approached by a company that sells a lot of trainings in order to be the replacement for a trainer who did not have time to attend his date. I want to use this chance to contribute a little bit back and want to create the training, exercises and code as creative commons and MIT licensed material.&lt;/p&gt;
+
+&lt;h2 id=&quot;what_will_the_training_be_like&quot;&gt;What will the training be like?&lt;/h2&gt;
+
+&lt;p&gt;The training aims at people with basic Javascript skills, preferably web developers and want to dive a bit more into node.js, learn about the pattform and get some useful information on good practices with the platform.&lt;/p&gt;
+
+&lt;p&gt;It is straight forward pairprogramming or dojo style for everything the group does and all in a very technical fashion. I will provide around 10 little example “challenges” that will be easily solved by the attendees when attending the training. All with the goal to get over the basics and be able to productively start with server side Javascript.&lt;/p&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+
+&lt;p&gt;The contents are going from zero to developing versioned commonjs modules and express.js apps.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How node works &amp;amp; why javascript on the server side&lt;/li&gt;
+
+&lt;li&gt;Building and executing a basic node.js code&lt;/li&gt;
+
+&lt;li&gt;Networking and async code&lt;/li&gt;
+
+&lt;li&gt;Data Access with REDIS&lt;/li&gt;
+
+&lt;li&gt;Debugging a node application&lt;/li&gt;
+
+&lt;li&gt;Managing multiple instances of node.js&lt;/li&gt;
+
+&lt;li&gt;Monitoring node apps&lt;/li&gt;
+
+&lt;li&gt;Coding Dojos&lt;/li&gt;
+
+&lt;li&gt;Node.js build tools - Gulp and Grunt&lt;/li&gt;
+
+&lt;li&gt;Git(hub) development workflow&lt;/li&gt;
+
+&lt;li&gt;TDD with node.js&lt;/li&gt;
+
+&lt;li&gt;Creating own modules&lt;/li&gt;
+
+&lt;li&gt;Web development&lt;/li&gt;
+
+&lt;li&gt;Connect&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is all the stuff I would have loved to know when I started out with the platform and covers a fair deal of the node.js “standards”&lt;/p&gt;
+
+&lt;h2 id=&quot;the_result&quot;&gt;The result&lt;/h2&gt;
+
+&lt;p&gt;This should set up everyone with enough skills to start out seriously into node. You could learn all that from tutorials that are out there. But having it all in a intense 2-day training should be very valuable for teams and companies venturing out into the world of node and serverside Javascript.&lt;/p&gt;
+
+&lt;h2 id=&quot;interested&quot;&gt;Interested?&lt;/h2&gt;
+
+&lt;p&gt;If you are interested in receiving the training or the contents of it: Hit me up with any of the ways to get in touch with me on this website or twitter.&lt;/p&gt;</description>
+				<pubDate>Mon, 03 Nov 2014 00:42:13 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/11/03/nodejs-training-incoming.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/11/03/nodejs-training-incoming.html</guid>
+			</item>
+		
+			<item>
+				<title>Weekly recap - Week #43</title>
+				<description>&lt;p&gt;This was a week full of preparations.&lt;/p&gt;
+
+&lt;p&gt;The talk for the Berlin PHP Usergroup is finished. It features: bower, gulp, grunt, docker, chef, puppet, analytics, new relic, a lot of js frameworks and more. This is about how to avoid a re-write of your code in a year or two. I guess we all know the web will stay and we should code software for it like it stays. The slides are on &lt;a href=&quot;http://de.slideshare.net/sebastianschuermann/surviving-your-frontend-wip-sneak-peak&quot;&gt;Slideshare&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My “Playpplication” Video for play4agile 2015 is out there. There was a formal process for everyone who wants to attend to make a video and put it online in order to avoid the normal “who clicks fastest gets a ticket” process. I liked it and it looks there is a reasonable amount of applications out there. Mine is here on &lt;a href=&quot;https://www.youtube.com/watch?v=JZE37WfUJE8&quot;&gt;youtube&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Still we are spreading the word about the Pairprogramming workshops in Hamburg and Munich. You can book both locations now.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.xing.com/events/pairprogramming-workshop-1465057/&quot;&gt;Hamburg&lt;/a&gt; (17+18.11.2014)&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://www.xing.com/events/pairprogramming-workshop-1470922&quot;&gt;Munich&lt;/a&gt; (03+04.12.2014) there.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I still hate &lt;a href=&quot;https://github.com/cucumber/cucumber-js/issues/157&quot;&gt;cucumber.js&lt;/a&gt; a bit and I actively look for a user who can help me with the very long stack traces. That is not helpful and in the first run Dominik Jungowskis &lt;a href=&quot;https://www.npmjs.org/package/cucumber-assert&quot;&gt;cucumber-assert&lt;/a&gt; did not help as well (yet). I might have a special configuration. Next week it will be back to the drawing board.&lt;/p&gt;
+
+&lt;p&gt;There is a new &lt;a href=&quot;http://dissident-trainings.de/workshops.html&quot;&gt;site&lt;/a&gt; about my workshops so that there is more visbility on trainings.&lt;/p&gt;
+
+&lt;p&gt;I added a new workshop about &lt;a href=&quot;https://github.com/DissidentTrainings/node-js-training/blob/master/Agenda.md&quot;&gt;node.js on github&lt;/a&gt;. This is a classic 2 day training for small teams in need of an introduction to the node.js plattform.&lt;/p&gt;</description>
+				<pubDate>Sun, 02 Nov 2014 09:42:13 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/11/02/weekly-recap-week-43.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/11/02/weekly-recap-week-43.html</guid>
+			</item>
+		
+			<item>
+				<title>Weekly recap - Week #43</title>
+				<description>&lt;p&gt;Oh my #gwad. What a week.&lt;/p&gt;
+
+&lt;p&gt;Bad news is bad. I had to cancel the Pairing workshop in Munich due to a lack of registrations. It looks like people and companies want more of these On-Site trainings. I might re-approach the idea of open workshops again, but for now (2014) the idea is done.&lt;/p&gt;
+
+&lt;p&gt;Luckily for me, a company in Hamburg wanted to have a Pairing workshop on-site. So what the heck. Bad news (cancelled workshop) is good news (time for a iknhouse workshop).&lt;/p&gt;
+
+&lt;p&gt;For a reason I am starting to dive into golang and start to acquire new knowhow. This is a awesome language and for a long time one with a type system. I am deeply amazed about the traits of the language and “hacky” feel it has. It feels a bit more complete comparing to my new beginnings in node.js some years ago.&lt;/p&gt;
+
+&lt;p&gt;There was a node.js training since the last #recap and it has been a load of fun.&lt;/p&gt;
+
+&lt;p&gt;A load of Javascript libs have found their way to my harddisk:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;InteractJS does everything from drag and drop to gestures in plain vanilla JS. I like this approach to the problem and thus the lib gets a mention here.&lt;/li&gt;
+
+&lt;li&gt;The Taunus client/serverside framework catched my eye and for a reason I liked working with it. I might reisit this soon.&lt;/li&gt;
+&lt;/ul&gt;</description>
+				<pubDate>Sun, 02 Nov 2014 09:42:13 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/11/02/Weekly-recap-week-48.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/11/02/Weekly-recap-week-48.html</guid>
+			</item>
+		
+			<item>
+				<title>Survive your front-end</title>
+				<description>&lt;p&gt;I am building a talk on how to approach big/long running front end projects that will be initially presented at the &lt;a href=&quot;http://www.bephpug.de/&quot;&gt;Berlin PHP User-group&lt;/a&gt; on Tuesday. I started to prepare it and want to nail down my thoughts.&lt;/p&gt;
+
+&lt;h2 id=&quot;where_i_am_coming_from&quot;&gt;Where I am coming from&lt;/h2&gt;
+
+&lt;p&gt;I have had the chance to get my hands on a lot of Javascript projects and most of the were not small projects per se. It is not only the raw lines of code that let me speak of “big” projects but longevity and complexity that you find in a modern front-end to a web applicationmaking it “big”.&lt;/p&gt;
+
+&lt;p&gt;A regular observation is that front-ends do not get the same level of love that a backend gets. Some examples I came across this year alone:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Specifications are very roughly prepared for front-ends&lt;/li&gt;
+
+&lt;li&gt;The crafty side of development, modularization and testing is neglected&lt;/li&gt;
+
+&lt;li&gt;Standards are not set and/or followed&lt;/li&gt;
+
+&lt;li&gt;The fact that a javascript front-end is the client to a server application is often overlooked&lt;/li&gt;
+
+&lt;li&gt;Front-end code is often thought as throw away.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Seriously guys. It would be good business to go on and on and on like this for years. It is already going on. You think your back-end code rots from &lt;a href=&quot;http://www.wikiwand.com/en/Greenfield_project&quot;&gt;greenfield&lt;/a&gt; to &lt;a href=&quot;http://www.wikiwand.com/en/Brownfield_(software_development&quot;&gt;brownfield&lt;/a&gt; fast? Look at your front-end code. It always rots faster.&lt;/p&gt;
+
+&lt;p&gt;“Code this fast. We can rewrite this next year.” and next year we are sitting on the same type of code for the same website, thinking about other things we could do, but re-write a bunch of front-end legacy crap. &lt;strong&gt;&lt;a href=&quot;http://bower.io/search/?q=slider&quot;&gt;Yeah, just implement another slider.&lt;/a&gt;&lt;/strong&gt; You like to work in one checkout with 20k lines of code? You want to implement just another self made &lt;a href=&quot;http://bower.io/search/?q=validation&quot;&gt;inline validation&lt;/a&gt; for address data? Go for it, but just do not expect me to like this and help you failing.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Sorry, I am too old for this. Been there, done that - 10 Years ago.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;where_to_start&quot;&gt;Where to start?&lt;/h2&gt;
+
+&lt;p&gt;When working out all the specific little hints and tipps for the talk I had to group them in order to create a &lt;strong&gt;flow&lt;/strong&gt; for the presentation. All the little things and tricks go into 3 groups.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tools - We have 2014 and there are a lot of new toys. Lets use them.&lt;/li&gt;
+
+&lt;li&gt;Craft - We must use the tools. This means pure development&lt;/li&gt;
+
+&lt;li&gt;Process - Development is just a part of a larger process.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is just the first order I brought into the first set of ideas. It all might be subject to change.&lt;/p&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+
+&lt;p&gt;There is a bunch of new tools to help with front-end development. A little sneak peak of the things I have used in the last weeks and months.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bower, Component.js or NPM - for modularization and re-use&lt;/li&gt;
+
+&lt;li&gt;Gulp and Grunt for Builds&lt;/li&gt;
+
+&lt;li&gt;Docker, Chef or Puppet to build a machine where it runs on&lt;/li&gt;
+
+&lt;li&gt;Mock and Stub Servers&lt;/li&gt;
+
+&lt;li&gt;GIT(hub), do you speak it?&lt;/li&gt;
+
+&lt;li&gt;…..(more in the talk)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can still right click and download Jquery if you want to, but there is no need for it and if you’ve checked it into your version control I do think of this as a anti-pattern. We moved way beyond this.&lt;/p&gt;
+
+&lt;p&gt;I do not mind using Jquery plugins as a basis for a project or React components, but please, can have consistency? I do not mind doing &lt;a href=&quot;http://programmers.stackexchange.com/questions/72569/what-are-the-pros-and-cons-of-coffeescript&quot;&gt;coffeescript&lt;/a&gt; for you (and learning another language while you pay me doing this) but please, can we have all the code consistent in like one langugae then?&lt;/p&gt;
+
+&lt;h2 id=&quot;craft&quot;&gt;Craft&lt;/h2&gt;
+
+&lt;p&gt;The pure coding is the thing that I call &lt;a href=&quot;http://manifesto.softwarecraftsmanship.org/&quot;&gt;craft&lt;/a&gt;. This has not changed much. But using tools alone will not help you.&lt;/p&gt;
+
+&lt;p&gt;I mean we can go on for the next ten years like this in our code ….&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function validForm(formName) {
+    switch (formName) {
+
+        case &amp;quot;request_showing&amp;quot;:
+            // Validate the first name
+            if (request_showing.first_name.value == &amp;quot;&amp;quot;) {
+                alert(&amp;quot;Please enter your first name.&amp;quot;);
+                request_showing.first_name.value = &amp;quot;*** FIRST NAME&amp;quot;;
+                request_showing.first_name.focus();
+                problem = true;
+            };
+            break;
+
+        case &amp;quot;email_friend&amp;quot;:
+        // ....... 
+
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or we can grow up and use patterns and a little thinking to find some &lt;a href=&quot;http://sourcemaking.com/refactoring/replace-conditional-with-polymorphism&quot;&gt;slick implementations&lt;/a&gt; that follow old concepts like &lt;a href=&quot;http://www.wikiwand.com/en/Coupling_(computer_programming&quot;&gt;coupling&lt;/a&gt;) and &lt;a href=&quot;http://www.wikiwand.com/en/Cohesion_(computer_science&quot;&gt;cohesion&lt;/a&gt;). It is not new and just because you have visited jsconf last week and took away the concepts from &lt;a href=&quot;http://es5.github.io/&quot;&gt;es5&lt;/a&gt;, &lt;a href=&quot;https://github.com/Reactive-Extensions/RxJS&quot;&gt;rxJS&lt;/a&gt; or any other reactive variant these “rules” are not bollocks.&lt;/p&gt;
+
+&lt;p&gt;Really, I have seen this pattern over and over. The Jquery guys told us all the stuff we did before was crap in 2004 with all the same arguments used today by the rxJS community. And seriously the language that we actually use has not really changed. It is still javascript and the browsers we target still ask for a pretty old ECMA Standard. IE8 anyone? ;)&lt;/p&gt;
+
+&lt;p&gt;It is not that I do not care for the niceties of es5, but some old patterns do not get out of fashion and a DOM tree, the main target of any JS front-end project, is still a evented thing so event driven programming will get you very far.&lt;/p&gt;
+
+&lt;h2 id=&quot;process&quot;&gt;Process&lt;/h2&gt;
+
+&lt;p&gt;The “best” thing I have seen in the last year was a code review tool giving a automated +1 for any checkin based on executing the tests of the codebase I was assigned to. So far so good. But the tests executed in this case were the ones for the backend codebase. Front-end tests did not get executed at all (they were broken at the time). This is how you subvert the basically pretty cool code review process (no I wont argue pairing vs. code reviews here - although I am a big proponent of paired code as you all know). A lot of the investments done (tests for the frontend code), but all the money invested thrown out of the window.&lt;/p&gt;
+
+&lt;p&gt;With a non-modularized codebase, in the same repository like your backend you are pretty much set up to fail. It starts with the big codebase, goes on with a one size fits all test and release process where you are pretty much forced to check all the functionality all the time. Besides TDD and some integration testing you are pretty much bound to do most of your real testing in a &lt;a href=&quot;http://www.wikiwand.com/en/Exploratory_testing&quot;&gt;explorative&lt;/a&gt; way. It is a very important way of testing but should be used as a an extra to show your blind spots, discover new areas to test and not be the most important source for bugs.&lt;/p&gt;
+
+&lt;p&gt;This is what you do when you specify requirements. &lt;strong&gt;The checkouts address form does need a inline validation&lt;/strong&gt; is not a requirement in my world. I am sorry. But starting coding will just get you into a long loop of &lt;strong&gt;trial and error&lt;/strong&gt; that is inherently costly and as I started out: you will repeat this next year. To be constructive here, why not go down the road of &lt;a href=&quot;http://www.wikiwand.com/en/Specification_by_example&quot;&gt;specification by example&lt;/a&gt;. Yeah I know, that sounds like a big hassle. If you calculate the &lt;a href=&quot;http://blogg.bouvet.no/wp-content/uploads/2012/03/cost-of-bugs2.jpg&quot;&gt;cost of bugs&lt;/a&gt; in specific steps of the development process, you might change your thinking here.&lt;/p&gt;
+
+&lt;h2 id=&quot;my_point&quot;&gt;My point!&lt;/h2&gt;
+
+&lt;p&gt;I think we now can stop repeating the fails of the last ten years (and more) over and over. We have evolved the tools, craft and process over the last 10 years in a way that really helps with this.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tools - Use the tools at hand. They are not toys and they are a pretty good investment. Use them with care, but use them.&lt;/li&gt;
+
+&lt;li&gt;Craft - Front-end is hardcore software development. Accept it and learn it.&lt;/li&gt;
+
+&lt;li&gt;Process - Process wise we learned a lot on how we can improve development and find errors and bugs early in development. CI, CD, Feedback and all this is not a joke. This is the new imperative.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am looking forward to the talk and as always I am looking for feedback in the comments section here.&lt;/p&gt;</description>
+				<pubDate>Wed, 29 Oct 2014 21:00:00 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/10/29/survive-your-frontend-thoughts.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/10/29/survive-your-frontend-thoughts.html</guid>
+			</item>
+		
+			<item>
+				<title>The BDD project - Second steps</title>
+				<description>&lt;p&gt;More progress (Version 0.0.1) is made and we are a little further down the road towards a first deploy.&lt;/p&gt;
+
+&lt;h2 id=&quot;frameworks__tools&quot;&gt;Frameworks &amp;amp; Tools&lt;/h2&gt;
+
+&lt;p&gt;I sided with the &lt;a href=&quot;http://silex.sensiolabs.org/&quot;&gt;Silex&lt;/a&gt; framework that allows for easy development with PHP and Symfony2 components. I spent the last 3 years with &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express.js&lt;/a&gt; which follows the same doctrine as its Ruby variant &lt;a href=&quot;http://www.sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;. If stuff will become a little chaotic and the project gets bigger the switch to &lt;a href=&quot;http://symfony.com/&quot;&gt;Symfony 2&lt;/a&gt; will not hurt to much since a lot of the infrastructure is the same.&lt;/p&gt;
+
+&lt;p&gt;The built in &lt;a href=&quot;http://www.lornajane.net/posts/2012/php-5-4-built-in-webserver&quot;&gt;PHP webserver&lt;/a&gt; will do nicely for development purposes. It is an awesome tool.&lt;/p&gt;
+
+&lt;p&gt;For the Scenario and BDD side of things I went with &lt;a href=&quot;https://github.com/cucumber/cucumber-js&quot;&gt;Cucumber.js&lt;/a&gt; and &lt;a href=&quot;https://github.com/admc/wd&quot;&gt;webdriver&lt;/a&gt;. It seems the thing that works right now.&lt;/p&gt;
+
+&lt;p&gt;Another decision I had to make was the one of the build tool, which is in this case &lt;a href=&quot;http://gulpjs.com/&quot;&gt;gulp.js&lt;/a&gt;. I started to like the non-verbosity of the tool.&lt;/p&gt;
+
+&lt;h2 id=&quot;a_first_scenario&quot;&gt;A first scenario&lt;/h2&gt;
+
+&lt;p&gt;In order to keep scanarios and stories separated the decisionw as to keep stories in the &lt;a href=&quot;https://github.com/DissidentTrainings/xp-practices-site/issues&quot;&gt;github bugtracker&lt;/a&gt; and the scenarios go as &lt;a href=&quot;https://github.com/DissidentTrainings/xp-practices-site/tree/master/features&quot;&gt;feature files&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, there is a point where I have to start and stuff needs to be shipped. In order to wire up everything I decided to add a scenario, &lt;a href=&quot;https://github.com/DissidentTrainings/xp-practices-site/blob/master/features/support/world.js&quot;&gt;setup cucumber with webdriver&lt;/a&gt; (not only installing it, but writing the code that actually uses the webdriver api).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Scenario&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This should force me to implement a lot of basic stuff right away. and relates to &lt;a href=&quot;https://github.com/DissidentTrainings/xp-practices-site/issues/2&quot;&gt;Story #2&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Feature: View Practice
+  As a workshop participant and website user
+  I want to read about specific practices
+  so that I know what it is about
+  and I can decide if I want to have it in the workshop
+
+  Scenario: View Pairprogrammig
+    Given I surf to &amp;#39;/practices/pairprogramming.html&amp;#39;
+    Then I should see a level 1 heading &amp;#39;Pairprogramming&amp;#39;
+    And a paragraph of text
+    And a unordered list of links to external websites
+
+  Scenario: Link to allies
+    Given I surf to &amp;#39;/practices/pairprogramming.html&amp;#39;
+    When I should see a list of allies
+    Then the list of allies should contain &amp;#39;Test Driven Development&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I will see how this works out in the next steps. ;)&lt;/p&gt;
+
+&lt;h2 id=&quot;next_steps&quot;&gt;Next steps&lt;/h2&gt;
+
+&lt;p&gt;Some things come into mind&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Automating the inclusion of the original markdown files about the practices&lt;/li&gt;
+
+&lt;li&gt;Deploy it&lt;/li&gt;
+
+&lt;li&gt;Implement Story #1 and #2&lt;/li&gt;
+
+&lt;li&gt;Find a way to test and validate that it works&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Things I wont do (yet)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Heavy TDDing - I am not yet writing an big chun of APIs right now&lt;/li&gt;
+
+&lt;li&gt;CI - Given the “advice” I took away from the guys of Unruly I will delay that for a later time and dont focus so much on it.&lt;/li&gt;
+&lt;/ul&gt;</description>
+				<pubDate>Wed, 22 Oct 2014 21:00:00 +0000</pubDate>
+				<link>http://dissident-trainings.de/2014/10/22/the-bdd-project-second-steps.html</link>
+				<guid isPermaLink="true">http://dissident-trainings.de/2014/10/22/the-bdd-project-second-steps.html</guid>
+			</item>
+		
+	</channel>
+</rss>

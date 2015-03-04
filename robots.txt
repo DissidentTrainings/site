@@ -1,0 +1,3 @@
+# robotstxt.org/
+User-agent: *
+Sitemap: http://dissident-trainings.de/sitemap.xml
